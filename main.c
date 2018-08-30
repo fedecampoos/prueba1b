@@ -1,33 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int sumar(int, int);
+int pedirNumero(char []);
 
 int main()
 {
+    int numero;
+    int nota;
+    int legajo;
+    int edad;
 
-    int suma;
-    int numeroUno;
-    int numeroDos;
+    legajo=pedirNumero("ingrese un legajo: ");
 
-    printf("ingrese el primer numero: ");
-    scanf("%d", &numeroUno);
+    nota = pedirNumero("ingrese una nota");
 
-    printf("ingrese el segundo numero: ");
-    scanf("%d", &numeroDos);
+    edad = pedirNumero("ingrese la edad");
 
-    suma = sumar(numeroUno , numeroDos);
 
-    printf (" el resultado es : %d", suma );
 
     return 0;
 }
-  int sumar(int numeroUno, int numeroDos)
-{
-    int suma;
+    int pedirNumero(char texto[])
+    {
+        int numero ;
+        printf("%s", texto);
+        scanf("&d", &numero);
 
-    suma = numeroUno + numeroDos;
+        return numero;
 
-    return suma;
-
-}
+    }
